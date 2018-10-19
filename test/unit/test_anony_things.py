@@ -8,7 +8,7 @@ sys.path.append(os.path.normpath(os.path.join(os.path.dirname(__file__), '../../
 @pytest.fixture
 # def valid_dash_address(network='mainnet'):
 def valid_anon_address(network='mainnet'):
-    return 'AnS24asy8EcT1TwgYoXY4X6MkUvade2Fnyi' if (network == 'testnet') else 'tALE7yMqLXm41i89f2ttzgJLQgEJeX4yKgm'
+    return 'tALu8hopFiZSvstLoUAVXWPz68nWidi31PR' if (network == 'testnet') else 'AnS24asy8EcT1TwgYoXY4X6MkUvade2Fnyi'
 
 
 @pytest.fixture
@@ -64,35 +64,35 @@ def mn_status_bad():
 
 
 # def test_valid_dash_address():
-# def test_valid_anon_address():
-#     # from dashlib import is_valid_dash_address
-#     from anonlib import is_valid_anon_address
+def test_valid_anon_address():
+    # from dashlib import is_valid_dash_address
+    from anonlib import is_valid_anon_address
 
-#     main = valid_anon_address()
-#     test = valid_anon_address('testnet')
+    main = valid_anon_address()
+    test = valid_anon_address('testnet')
 
-#     assert is_valid_anon_address(main) is True
-#     assert is_valid_anon_address(main, 'mainnet') is True
-#     assert is_valid_anon_address(main, 'testnet') is False
+    assert is_valid_anon_address(main) is True
+    assert is_valid_anon_address(main, 'mainnet') is True
+    assert is_valid_anon_address(main, 'testnet') is False
 
-#     assert is_valid_anon_address(test) is False
-#     assert is_valid_anon_address(test, 'mainnet') is False
-#     assert is_valid_anon_address(test, 'testnet') is True
+    assert is_valid_anon_address(test) is False
+    assert is_valid_anon_address(test, 'mainnet') is False
+    assert is_valid_anon_address(test, 'testnet') is True
 
 
-# def test_invalid_anon_address():
-#     from anonlib import is_valid_anon_address
+def test_invalid_anon_address():
+    from anonlib import is_valid_anon_address
 
-#     main = invalid_anon_address()
-#     test = invalid_anon_address('testnet')
+    main = invalid_anon_address()
+    test = invalid_anon_address('testnet')
 
-#     assert is_valid_anon_address(main) is False
-#     assert is_valid_anon_address(main, 'mainnet') is False
-#     assert is_valid_anon_address(main, 'testnet') is False
+    assert is_valid_anon_address(main) is False
+    assert is_valid_anon_address(main, 'mainnet') is False
+    assert is_valid_anon_address(main, 'testnet') is False
 
-#     assert is_valid_anon_address(test) is False
-#     assert is_valid_anon_address(test, 'mainnet') is False
-#     assert is_valid_anon_address(test, 'testnet') is False
+    assert is_valid_anon_address(test) is False
+    assert is_valid_anon_address(test, 'mainnet') is False
+    assert is_valid_anon_address(test, 'testnet') is False
 
 
 # def test_deterministic_masternode_elections(current_block_hash, mn_list):

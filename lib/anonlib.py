@@ -21,7 +21,7 @@ def is_valid_anon_address(address, network='mainnet'):
     # base58 encoded bytes should be 25.  This means the number of characters
     # in the encoding should be about 34 ( 25 * log2( 256 ) / log2( 58 ) ).
     # dash_version = 140 if network == 'testnet' else 76
-    anon_version = 28 if network == 'testnet' else 140
+    anon_version = 28 if network == 'testnet' else 5
     # Check length (This is important because the base58 library has problems
     # with long addresses (which are invalid anyway).
     if ((len(address) < 26) or (len(address) > 36)):
