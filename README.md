@@ -1,12 +1,5 @@
-# Official repository here https://github.com/anonymousbitcoin/sentinel
+[![](https://img.shields.io/badge/latest%20version-v1.1.2-green.svg)](https://github.com/anonymousbitcoin/sentinel/releases/tag/v1.1.2)
 
-Watchdog expired problem fixed. Thanks to https://github.com/Tetricoins
-
-You should add full path to sentinel.conf in your crontab.
-
-    $ crontab -e
-
-    * * * * * cd /root/sentinel; SENTINEL_CONFIG=/root/sentinel/sentinel.conf && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1
 
 # ANON Sentinel
 
@@ -17,7 +10,7 @@ Sentinel is an autonomous agent for persisting, processing and automating ANON g
 
 Sentinel is implemented as a Python application that binds to a local version anond instance on each ANON Masternode.
 
-This guide covers installing Sentinel onto an existing 12.1 Masternode in Ubuntu 14.04 / 16.04.
+This guide covers installing Sentinel onto an existing 12.1 Masternode in Ubuntu 14.04 / 16.04 / 18.04.
 
 ## Quick Setup Script
 
@@ -45,7 +38,6 @@ sudo apt-get update
 sudo apt-get -y install python-virtualenv
 sudo apt-get install virtualenv
 ```
-
 Make sure the local ANON daemon running is at least version X (X)
 
 ```
@@ -79,7 +71,7 @@ In the crontab editor, add the lines below, replacing '/home/YOURUSERNAME/sentin
 * * * * * cd /home/YOURUSERNAME/sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1
 ```
 
-**IF** you are a **ROOT** user type the following:
+**IF** you are a **ROOT**, user type the following:
 
 ```   
 * * * * * cd /root/sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1
