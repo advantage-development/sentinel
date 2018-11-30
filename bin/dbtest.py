@@ -9,19 +9,19 @@ import config
 from models import Superblock, Proposal, GovernanceObject, Setting, Signal, Vote, Outcome, Watchdog
 from models import VoteSignals, VoteOutcomes
 from peewee import PeeweeException  # , OperationalError, IntegrityError
-from anond import AnonDaemon
-# import dashlib
-import anonlib
+from advantaged import AdvantageDaemon
+# import advantagelib
+import advantagelib
 from decimal import Decimal
-# dashd = DashDaemon.from_dash_conf(config.dash_conf)
-anond = AnonDaemon.from_anon_conf(config.anon_conf)
+# advantaged = AdvantageDaemon.from_Advantage_conf(config.Advantage_conf)
+advantaged = AdvantageDaemon.from_Advantage_conf(config.Advantage_conf)
 import misc
 # ==============================================================================
 # do stuff here
 
 pr = Proposal(
     name='proposal7',
-    url='https://dashcentral.com/proposal7',
+    url='https://advantage.one/proposal7',
     payment_address='yTC62huR4YQEPn9AJHjnQxxreHSbgAoatV',
     payment_amount=39.23,
     start_epoch=1483250400,
